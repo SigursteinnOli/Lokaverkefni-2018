@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(241, 160, 160);
+    width: auto 60em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.takkar {
+    background-color: rgb(255, 107, 62); 
+    width: 100px;
+    text-align: center;
+    margin: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5em;
+    border: solid 2px brown;
+    display: block;
+}
+
+.takkar1 {
+    background-color: rgb(255, 209, 110); 
+    width: 100px;
+    text-align: center;
+    margin: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5em;
+    border: solid 2px brown;
+    display: block;
+}
