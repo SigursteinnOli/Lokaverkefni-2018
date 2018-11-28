@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Page Title</title>
+	<title>Bæjarins Bestu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="/static/Lokaverkefni.css" />
 	<script src="main.js"></script>
