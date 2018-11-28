@@ -59,13 +59,21 @@ def doinn():
     else:
         return template("ekkileyni.tpl")
 
-@route("/comment")
+@route("/comment", method="POST")
 def index():
-    #u = request.forms.get("user")
+    u = request.forms.get("user")
     c = request.forms.get("comment")
 
     conn = pymysql.connect(host="tsuts.tskoli.is", port=3306, user="1803012590", password="mypassword", db="1803012590_vef_lok")
     cur = conn.cursor()
+
+    if result[0] == 0:
+        cur.execute("INSERT INTO 1803012590_vef_lok.comment Values(%s)", (c))
+        conn.commit()
+        cur.close()
+        conn.close()
+        return "<h2>Þetta virkaði!</h2>"
+    
 
     return template("comment",c=c)
 

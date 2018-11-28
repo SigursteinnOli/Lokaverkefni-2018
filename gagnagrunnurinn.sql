@@ -15,6 +15,12 @@ create table 1803012590_vef_lok.comment(
 commID INt auto_increment,
 comment text not null,
 user varchar(32) not null,
-primary key (commID),
-
+primary key (commID)
 );
+
+
+
+insert into 1803012590_vef_lok.comment (comment, user)
+values ("Ég elska pulsur","Palli Pulsa");
+
+drop table 1803012590_vef_lok.c
