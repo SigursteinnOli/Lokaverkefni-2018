@@ -9,7 +9,7 @@ from bottle import *
 
 @get("/")
 def index():
-    return template("index")
+     return template("index")
 
 @route('/innskra')
 def index():
@@ -66,6 +66,9 @@ def index():
 
     conn = pymysql.connect(host="tsuts.tskoli.is", port=3306, user="1803012590", password="mypassword", db="1803012590_vef_lok")
     cur = conn.cursor()
+
+    cur.execute("SELECT count(*) FROM 1803012590_vef_lok.comment where comment=%s",(c))
+    result = cur.fetchone()
 
     if result[0] == 0:
         cur.execute("INSERT INTO 1803012590_vef_lok.comment Values(%s)", (c))

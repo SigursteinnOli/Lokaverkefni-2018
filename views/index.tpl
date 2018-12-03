@@ -17,6 +17,12 @@
 	<div class="takkar1">
 		<a href="/nyskra" class="takkar">Nýskráning</a>
 	</div>
-	
+	% import pymysql
+	% conn = pymysql.connect(host="tsuts.tskoli.is", port=3306, user="1803012590", password="mypassword", db="1803012590_vef_lok")
+	% cur = conn.cursor()
+	% cur.execute("SELECT * FROM 1803012590_vef_lok.comment")
+	% for i in cur:
+		<p>{{i}}</p>
+
 </body>
 </html>
