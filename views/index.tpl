@@ -7,7 +7,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="/static/Lokaverkefni.css" />
 	<script src="main.js"></script>
-	
+	<style>
+		.comment {
+			background-color: rgb(255, 209, 110);
+			margin: 5px;
+			border-radius: 30px;
+			
+		}
+
+		.hofundur {
+			padding-left: 30px;
+			padding-top: 5px;
+			background-color: rgb(255, 107, 62);
+			border-radius: 30px; 
+			border: solid 2px brown;
+    
+		}
+
+		.content {
+			padding-left: 50px;
+			padding-bottom: 5px;
+			
+			
+
+		}
+	</style>
 </head>
 <body>
 	<h1>Bæjarins Bestu</h1>
