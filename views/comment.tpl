@@ -13,7 +13,8 @@
 </head>
 <body>
     <p>{{c}}</p>
-    <p>blabla</p>
+    <p>Commentið þitt hefur verið skráð</p>
+    <a href="/">Aftur á heimasíðu</a>
 
 
 </body>

@@ -62,16 +62,28 @@ def doinn():
 @route("/comment", method="POST")
 def index():
     id = request.forms.get("commID")
+    u = request.forms.get("user")
     c = request.forms.get("comment")
 
     conn = pymysql.connect(host="tsuts.tskoli.is", port=3306, user="1803012590", password="mypassword", db="1803012590_vef_lok")
     cur = conn.cursor()
 
-    cur.execute("insert into 1803012590_vef_lok.comment (commID, user, comment) values (3,%s,%s)", (u,c))
-    cur.close
+    cur.execute("SELECT * FROM 1803012590_vef_lok.comment")
+    r2 = cur.fetchone()
+    print("R2=",r2)
 
-    return template("comment",id=id,u=u,c=c)
+    cur.execute("SELECT count(*) FROM 1803012590_vef_lok.users where user=%s",(u))
+    result = cur.fetchone()
+    if result[0] == 1:
+        cur.execute("insert into 1803012590_vef_lok.comment (user, comment) values (%s,%s)", (u,c))
+        conn.commit()
+        cur.close()
+        conn.close()
+        return template("comment",id=id,u=u,c=c)
+    else:
+        return u, " er ekki skráður notandi hjá Bæjarins Bestu <br> <a href = '/'>Aftur á heimasíðu</a>"
 
+    
 @route("/members")
 def member():
     conn = pymysql.connect(host="tsuts.tskoli.is", port=3306, user="1803012590", password="mypassword", db="1803012590_vef_lok")

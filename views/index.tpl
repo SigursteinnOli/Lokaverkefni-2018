@@ -22,7 +22,11 @@
 	% cur = conn.cursor()
 	% cur.execute("SELECT * FROM 1803012590_vef_lok.comment")
 	% for i in cur:
-		<p>{{i}}</p>
+		<div class="comment">
+			<h3 class="hofundur">{{i[2]}}</h3>
+			<p class="content">{{i[1]}}</p>
+		</div>
+		
 
 </body>
 </html>
